@@ -1,5 +1,5 @@
 site:
-  name: AstroWind
+  name: Pauline Kolde
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
