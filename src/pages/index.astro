@@ -4,12 +4,12 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 /*import Features from '~/components/widgets/Features.astro';*/
-import Features2 from '~/components/widgets/Features2.astro';
+/*import Features2 from '~/components/widgets/Features2.astro';*/
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
+/*import FAQs from '~/components/widgets/FAQs.astro';*/
+/*import Stats from '~/components/widgets/Stats.astro';*/
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
@@ -25,12 +25,12 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
+        text: 'Subscribe',
         href: 'https://github.com/arthelokyo/astrowind',
         target: '_blank',
         icon: 'tabler:download',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Contact me', href: '#contact' },
     ]}
     image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
   >
@@ -48,7 +48,7 @@ const metadata = {
 
   <!-- Note Widget ******************* -->
 
-  <Note title="My Philosophy:" description="Curious Simplicity, Best Practices and High Performance" />
+  <Note title="My Philosophy:" description="Innovation. Inspiration. Connection." />
 
   <!-- Features Widget *************** -->
 <!--   <Features
@@ -105,19 +105,18 @@ const metadata = {
     items={[
       {
         title: 'Deep-dives into Dynamics 365 Customer Insights & Power Platform',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+       /* description:
+          '...',*/
       },
       {
         title: 'Real use cases',
-        description:
-          'from marketing automation to AI-driven sales & Copilot Studio',
+        /*description:
+          'from marketing automation to AI-driven sales & Copilot Studio',*/
       },
       {
         title: 'Community stories',
-        description:
-          'and learnings from events like Nordic Summit, DynamicsMinds, and of course ColorCloud',
-      },
+        /*description:
+          'and learnings from events like Nordic Summit, DynamicsMinds, and of course ColorCloud',*/      },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
@@ -125,8 +124,8 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Hands-on guides, lessons from my projects, and fresh perspectives</h3>
-      I believe knowledge grows when it's shared — and this space is where I turn my experience into resources you can use.
+      <!--*<h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Hands-on guides, lessons from my projects, and fresh perspectives</h3>-->
+      I believe knowledge grows when it's shared and this space is where I turn my experience into resources you can use.
     </Fragment>
 
     <Fragment slot="bg">
@@ -135,7 +134,7 @@ const metadata = {
   </Content>
 
   <!-- Content Widget **************** -->
-
+<!-- 
   <Content
     isAfterContent
     items={[
@@ -169,10 +168,10 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
-  <!-- Content Widget **************** -->
-
+  <!-- Content Widget **************** 
+ 
   <Content
     isReversed
     isAfterContent
@@ -207,8 +206,7 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
-
+  </Content>  -->
   <!-- Steps Widget ****************** -->
 
   <Steps
@@ -217,23 +215,25 @@ const metadata = {
       {
         title: 'October 2025: <span class="font-medium">South Coast Summit</span>',
         description:
-          "Add link here",
+          '<a href="https://southcoastsummit.com" target="_blank" class="text-blue-600 hover:text-blue-800">Learn more about South Coast Summit</a>',
         icon: 'tabler:check',
       },
       {
         title: 'December 2025:<span class="font-medium"> Microsoft AI Tour in Frankfurt</span>',
         description:
-          "Add link here",
+           '<a href="https://aitour.microsoft.com/flow/microsoft/frankfurt26/landingpage/page/cityhome" target="_blank" class="text-blue-600 hover:text-blue-800">Learn more about Microsoft AI Tour</a>',
         icon: 'tabler:check',
       },
       {
         title: 'January 2026: <span class="font-medium">CTTT in Tallinn</span>',
         description:
-          'Add link here',
+           '<a href="https://cloudtechtallinn.com/" target="_blank" class="text-blue-600 hover:text-blue-800">Learn more about CTTT</a>',
         icon: 'tabler:check',
       },
       {
         title: 'April 2026: <span class="font-medium">ColorCloud in Hamburg</span>',
+        description:
+           '<a href="https://color.cloud/" target="_blank" class="text-blue-600 hover:text-blue-800">Learn more about ColorCloud</a>',
         icon: 'tabler:check',
       },
     ]}
@@ -243,7 +243,7 @@ const metadata = {
     }}
   />
 
-  <!-- Features2 Widget ************** -->
+  <!-- Features2 Widget ************** 
 
   <Features2
     title="Most used widgets"
@@ -305,19 +305,16 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Features2>
+  </Features2>-->
 
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
+    title="Find out more content in my Blog"
+    information={`On this blog, I share hands-on guides, lessons from my projects, and fresh perspectives from conferences and community work.`}
   />
 
-  <!-- FAQs Widget ******************* -->
+  <!-- FAQs Widget ******************* 
 
   <FAQs
     title="Frequently Asked Questions"
@@ -356,9 +353,9 @@ const metadata = {
           "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
       },
     ]}
-  />
+  />-->
 
-  <!-- Stats Widget ****************** -->
+  <!-- Stats Widget ****************** 
 
   <Stats
     stats={[
@@ -368,14 +365,14 @@ const metadata = {
       { title: 'Users', amount: '48.4K' },
     ]}
   />
-
+-->
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
+        text: 'Contact me',
         href: 'https://github.com/arthelokyo/astrowind',
         target: '_blank',
         icon: 'tabler:download',
@@ -383,12 +380,11 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+     Pauline <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Kolde</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Want to know more or get help on something? <br class="hidden md:inline" />
     </Fragment>
   </CallToAction>
 </Layout>
