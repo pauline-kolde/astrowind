@@ -9,22 +9,22 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Pauline Kolde
+    template: '%s — Pauline Kolde'
+  description: "Dynamics 365 Customer Insights Blog."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: The Art Of Customer Insights
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
+    handle: '@paulinekolde'
+    site: '@paulinekolde'
     cardType: summary_large_image
 
 i18n:
