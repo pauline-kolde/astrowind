@@ -3,7 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
+/*import Features from '~/components/widgets/Features.astro';*/
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
@@ -35,29 +35,26 @@ const metadata = {
     image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Welcome<span class="hidden xl:inline">to my blog</span>
-      <span class="text-accent dark:text-white"> Art Of Customer Insights</span> 
+      Welcome <span class="hidden xl:inline">to my blog</span>
+      <span class="text-accent dark:text-white"> <br>The Art Of Customer Insights</span> 
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Pauline Kolde</span> has fun writing about CI-J</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Learn more about Dynamics 365 Customer Insights.
-    </Fragment>
+        Turning Customer Experience into Business Impact with AI, Dynamics 365 & the Power Platform.</span>
+    <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
+       </Fragment>
   </Hero>
 
   <!-- Note Widget ******************* -->
 
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
+  <Note title="My Philosophy:" description="Curious Simplicity, Best Practices and High Performance" />
 
   <!-- Features Widget *************** -->
-
-  <Features
+<!--   <Features
     id="features"
-    tagline="Features"
-    title="What you will find here"
+    tagline="TL:DR"
+    title="Pauline"
     subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
     items={[
       {
@@ -98,28 +95,28 @@ const metadata = {
       },
     ]}
   />
-
+-->
   <!-- Content Widget **************** -->
 
   <Content
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    tagline="About this blog"
+    title="Technology should feel empowering, not overwhelming."
     items={[
       {
-        title: 'Built on top of Astro 5.0',
+        title: 'Deep-dives into Dynamics 365 Customer Insights & Power Platform',
         description:
           'Benefiting from the performance and developer-friendly features of this modern static site generator.',
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'Real use cases',
         description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+          'from marketing automation to AI-driven sales & Copilot Studio',
       },
       {
-        title: 'Cross-browser compatibility',
+        title: 'Community stories',
         description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+          'and learnings from events like Nordic Summit, DynamicsMinds, and of course ColorCloud',
       },
     ]}
     image={{
@@ -128,8 +125,8 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Hands-on guides, lessons from my projects, and fresh perspectives</h3>
+      I believe knowledge grows when it's shared — and this space is where I turn my experience into resources you can use.
     </Fragment>
 
     <Fragment slot="bg">
@@ -215,28 +212,28 @@ const metadata = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="Let's meet at the next community event!"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'October 2025: <span class="font-medium">South Coast Summit</span>',
         description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+          "Add link here",
+        icon: 'tabler:check',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
+        title: 'December 2025:<span class="font-medium"> Microsoft AI Tour in Frankfurt</span>',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+          "Add link here",
+        icon: 'tabler:check',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'January 2026: <span class="font-medium">CTTT in Tallinn</span>',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
+          'Add link here',
+        icon: 'tabler:check',
       },
       {
-        title: 'Ready!',
+        title: 'April 2026: <span class="font-medium">ColorCloud in Hamburg</span>',
         icon: 'tabler:check',
       },
     ]}
