@@ -11,7 +11,7 @@ metadata:
   title:
     default: Pauline Kolde
     template: '%s — Pauline Kolde'
-  description: "Dynamics 365 Customer Insights Blog."
+  description: "Master Dynamics 365 Customer Insights with Microsoft MVP Pauline Kolde. Hands-on guides, use cases & tips for smarter marketing automation."
   robots:
     index: true
     follow: true
