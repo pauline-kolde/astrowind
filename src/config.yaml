@@ -1,6 +1,6 @@
 site:
   name: Pauline Kolde
-  site: 'https://astrowind.vercel.app'
+  site: 'https://paulinekolde.com'
   base: '/'
   trailingSlash: false
 

@@ -5,13 +5,13 @@ import Button from '~/components/ui/Button.astro';
 const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
 ---
 
-<form>
+<form method="POST" data-netlify="true">
   {
     inputs &&
       inputs.map(
         ({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '' }) =>
           name && (
-            <div class="mb-6">
+            <div class="mb-5">
               {label && (
                 <label for={name} class="block text-sm font-medium">
                   {label}

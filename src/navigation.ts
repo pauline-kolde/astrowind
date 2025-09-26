@@ -26,6 +26,7 @@ export const headerData = {
     },
     {
       text: 'Blog',
+      ref: getPermalink('/blog'),
       links: [
         {
           text: 'Blog List',
