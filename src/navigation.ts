@@ -26,7 +26,7 @@ export const headerData = {
     },
     {
       text: 'Blog',
-      ref: getPermalink('/blog'),
+      href: getPermalink('/blog'),
       links: [
         {
           text: 'Blog List',
@@ -53,9 +53,9 @@ export const headerData = {
     {
       text: 'Community',
       links: [
-        { text: 'ColorCloud', href: 'https://color.cloud/',  target: "_blank"},
-        { text: 'CX User Group', href: 'https://www.linkedin.com/company/customer-experience-user-group/' , target: "_blank" },
-        { text: 'DACH CI User Group', href: 'https://www.linkedin.com/company/microsoftcustomerinsightsdachcommunity/',  target: "_blank" },
+        { text: 'ColorCloud', href: 'https://color.cloud/'},
+        { text: 'CX User Group', href: 'https://www.linkedin.com/company/customer-experience-user-group/'  },
+        { text: 'DACH CI User Group', href: 'https://www.linkedin.com/company/microsoftcustomerinsightsdachcommunity/'},
         
       
         
@@ -86,25 +86,25 @@ export const footerData = {
     {
       title: 'Socials',
       links: [
-        { text: 'LinkedIn', href: 'https://www.linkedin.com/in/paulinekolde/', target: "_blank" },
-        { text: 'Youtube', href: 'https://www.youtube.com/@paulinekolde', target: "_blank" },
-        { text: 'MVP', href: 'https://mvp.microsoft.com/de-DE/MVP/profile/6ccc9e35-afef-49f1-88a1-e95e1e64806f' , target: "_blank"},
+        { text: 'LinkedIn', href: 'https://www.linkedin.com/in/paulinekolde/'},
+        { text: 'Youtube', href: 'https://www.youtube.com/@paulinekolde' },
+        { text: 'MVP', href: 'https://mvp.microsoft.com/de-DE/MVP/profile/6ccc9e35-afef-49f1-88a1-e95e1e64806f'},
       ],
     },
     {
       title: 'Dynamics 365',
       links: [
-        { text: 'Whats New in CI-J', href: 'https://learn.microsoft.com/en-us/dynamics365/customer-insights/journeys/whats-new-marketing',  target: '_blank'},
-        { text: 'Whats New in CI-D', href: 'https://learn.microsoft.com/en-us/dynamics365/customer-insights/data/whats-new-customer-insights',  target: '_blank' },
-        { text: 'MS Learn', href: 'https://learn.microsoft.com/en-us/dynamics365/customer-insights/',  target: '_blank'},
+        { text: 'What is New in CI-J', href: 'https://learn.microsoft.com/en-us/dynamics365/customer-insights/journeys/whats-new-marketing'},
+        { text: 'What is New in CI-D', href: 'https://learn.microsoft.com/en-us/dynamics365/customer-insights/data/whats-new-customer-insights' },
+        { text: 'MS Learn', href: 'https://learn.microsoft.com/en-us/dynamics365/customer-insights/'},
              ],
     },
     {
       title: 'Community',
       links: [
-        { text: 'ColorCloud', href: 'https://color.cloud/',  target: '_blank'},
-        { text: 'CX User Group', href: 'https://www.linkedin.com/company/customer-experience-user-group/' , target: "_blank"},
-        { text: 'DACH CI User Group', href: 'https://www.linkedin.com/company/microsoftcustomerinsightsdachcommunity/',  target: "_blank"
+        { text: 'ColorCloud', href: 'https://color.cloud/'},
+        { text: 'CX User Group', href: 'https://www.linkedin.com/company/customer-experience-user-group/'},
+        { text: 'DACH CI User Group', href: 'https://www.linkedin.com/company/microsoftcustomerinsightsdachcommunity/'
           },
         
       ],
@@ -114,7 +114,7 @@ export const footerData = {
       links: [
         { text: 'About me', href: '/about' },
         { text: 'Blog', href: '/blog' },
-        { text: 'CRMK Deutschland', href: 'https://www.crmk.eu/' , target: "_blank"},
+        { text: 'CRMK Deutschland', href: 'https://www.crmk.eu/'},
        
       ],
     },
@@ -124,10 +124,10 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/paulinekolde/', target: "_blank" },
-    { ariaLabel: 'Youtube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@paulinekolde', target: "_blank" },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/paulinekolde/'},
+    { ariaLabel: 'Youtube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@paulinekolde' },
       { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/pauline-kolde', target: "_blank" },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/pauline-kolde'},
   ],
   footNote: `
     2025 · Made with the help of <a class="text-blue-600 underline dark:text-muted" href="https://github.com/arthelokyo"> Arthelokyo</a> · All rights reserved.

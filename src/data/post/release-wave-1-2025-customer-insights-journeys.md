@@ -11,6 +11,7 @@ tags:
 metadata:
   canonical: https://paulinekolde.info/data\post/release-wave-1-2025-customer-insights-journeys
 ---
+[External link](https://example.com)
 
 It’s that exciting time of year again, the first release wave for Customer Insights Journeys 2025 is out! I always look forward to these updates and love exploring all the new features.
 <br>
