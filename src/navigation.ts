@@ -113,7 +113,6 @@ export const footerData = {
       title: 'Company',
       links: [
         { text: 'About me', href: '/about' },
-        { text: 'Blog', href: '/blog' },
         { text: 'CRMK Deutschland', href: 'https://www.crmk.eu/'},
        
       ],

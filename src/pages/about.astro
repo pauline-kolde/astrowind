@@ -6,7 +6,7 @@ import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 /*import Testimonials from '~/components/widgets/Testimonials.astro';*/
 import Steps from '~/components/widgets/Steps.astro';
-
+import pkOffice from '~/assets/images/pk_office.jpg';
 
 
 const metadata = {
@@ -56,9 +56,10 @@ const metadata = {
       
     ]}
     image={{
-      src: '~/assets/images/PK_Office.jpg',
+      src: pkOffice,
       alt: 'Pauline Kolde',
       loading: 'eager',
+      fetchpriority: 'high',
     }}
   >
     <Fragment slot="content">
@@ -101,32 +102,13 @@ That’s why I started my blog in August 2023: a place to share what I discover,
       },
       {
         title:
-          'CRM Consultant <br /> <span class="font-normal">Fellowmind, Frankfurt</span> <br /> <span class="text-sm font-normal">September 2017 - March, 2021</span>',
+          'CRM Consultant <br /> <span class="font-normal">Fellowmind, Eschborn</span> <br /> <span class="text-sm font-normal">September 2017 - March, 2021</span>',
         description: `One of the best decisions I ever made was joining the Young Talent Program at CRM Partners (now Fellowmind).<br /> As a career changer, it opened the door to Microsoft, Dynamics 365, and the Power Platform and taught me not just the tech, but problem-solving, creativity, and how technology can transform businesses.<br /> Looking back, I wouldn't change a thing. It was the start of an exciting journey.`,
         icon: 'tabler:briefcase',
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
   />
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    id="resume"
-    title="Education"
-    items={[
-      {
-        title: `Bachelor of Arts in Business Management - Tourism, Hotel and Event <br /> <span class="font-normal">Hochschule Mittweida</span> <br /> <span class="text-sm font-normal">2014 - 2017</span>`,
-        icon: 'tabler:school',
-      },
-      {
-        title: `Bachelor of Arts in Islamic Studies <br /> <span class="font-normal">Philipps University of Marburg</span> <br /> <span class="text-sm font-normal">2011 - 2014</span>`,
-        icon: 'tabler:school',
-      },
-    ]}
-    classes={{ container: 'max-w-3xl' }}
-  />
-
   <!-- Features3 Widget ************** 
 
   <Features3
@@ -174,6 +156,25 @@ That’s why I started my blog in August 2023: a place to share what I discover,
     ]}
   />
   -->
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="resume"
+    title="Education"
+    items={[
+      {
+        title: `Bachelor of Arts in Business Management - Tourism, Hotel and Event <br /> <span class="font-normal">Hochschule Mittweida</span> <br /> <span class="text-sm font-normal">2014 - 2017</span>`,
+        icon: 'tabler:school',
+      },
+      {
+        title: `Bachelor of Arts in Islamic Studies <br /> <span class="font-normal">Philipps University of Marburg</span> <br /> <span class="text-sm font-normal">2011 - 2014</span>`,
+        icon: 'tabler:school',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+
 
   
 

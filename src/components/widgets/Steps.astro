@@ -2,7 +2,8 @@
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Timeline from '~/components/ui/Timeline.astro';
 import Headline from '~/components/ui/Headline.astro';
-import Image from '~/components/common/Image.astro';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import type { Steps as Props } from '~/types';
 
 const {
@@ -40,18 +41,16 @@ const {
         <div class="relative md:basis-1/2">
           {typeof image === 'string' ? (
             <Fragment set:html={image} />
-          ) : (
+          ) : image && typeof image === 'object' && 'src' in image ? (
             <Image
+              src={((image as unknown) as { src: ImageMetadata; alt?: string }).src}
+              alt={((image as unknown) as { src: ImageMetadata; alt?: string }).alt || 'Steps image'}
               class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
-              widths={[400, 768]}
-              sizes="(max-width: 768px) 100vw, 432px"
               width={432}
               height={768}
-              layout="cover"
-              src={image?.src}
-              alt={image?.alt || ''}
+              loading="lazy"
             />
-          )}
+          ) : null}
         </div>
       )
     }

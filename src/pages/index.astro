@@ -1,6 +1,5 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 /*import Features from '~/components/widgets/Features.astro';*/
@@ -11,6 +10,11 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 /*import FAQs from '~/components/widgets/FAQs.astro';*/
 /*import Stats from '~/components/widgets/Stats.astro';*/
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import pkHero from '~/assets/images/pk_hero_image.png';
+import pkMicrosoft from '~/assets/images/pk_microsoft.jpg';
+import pkDmSpeaker from '~/assets/images/pk_dm_speaker.jpg';
+
+
 
 const metadata = {
   title: 'Pauline Kolde - The Art Of Customer Insights',
@@ -32,7 +36,7 @@ const metadata = {
       },
       { text: 'Read blog', href: '/blog' },
     ]}
-    image={{ src: '~/assets/images/header_image.svg', alt: 'Pauline and her daily fun' }}
+    image={{ src: pkHero, alt: 'Pauline' }}
   >
     <Fragment slot="title">
       Welcome to my blog
@@ -118,13 +122,13 @@ const metadata = {
           'and learnings from events like Nordic Summit, DynamicsMinds, and of course ColorCloud',*/},
     ]}
     image={{
-     src: '~/assets/images/PK_Microsoft.jpg',
-      alt: 'Pauline in front of Microsoft Logo',
+      src: pkMicrosoft,
+      alt: 'Pauline at Microsoft ',
     }}
   >
     <Fragment slot="content">
       <!--*<h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Hands-on guides, lessons from my projects, and fresh perspectives</h3>-->
-      I believe knowledge grows when it's shared and this space is where I turn my experience into resources you can use.
+      I believe knowledge grows when it's shared and this space is where I turn my experience into resources you can use. Happy reading!
     </Fragment>
 
     <Fragment slot="bg">
@@ -236,7 +240,10 @@ const metadata = {
         icon: 'tabler:check',
       },
     ]}
-    image={{ src: '~/assets/images/PK_DM_Speaker.jpg', alt: 'Dynamics Minds Session' }}
+  image={{
+    src: pkDmSpeaker,
+    alt: 'Pauline speaking at Dynamics Minds',
+  }}
   />
 
   <!-- Features2 Widget ************** 
@@ -371,7 +378,7 @@ const metadata = {
         text: 'Contact me',
         href: '/contact',
         target: '_blank',
-        icon: 'tabler:mailbox',
+        //icon: 'tabler:mailbox',
       },
     ]}
   >
