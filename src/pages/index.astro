@@ -10,8 +10,8 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 /*import FAQs from '~/components/widgets/FAQs.astro';*/
 /*import Stats from '~/components/widgets/Stats.astro';*/
 import CallToAction from '~/components/widgets/CallToAction.astro';
-/*import pkHero from '~/assets/images/pk_hero_image.png';
-import pkMicrosoft from '~/assets/images/pk_microsoft.jpg';*/
+import pkHero from '~/assets/images/pk_hero_image.png';
+import pkMicrosoft from '~/assets/images/pk_microsoft.jpg';
 
 
 const metadata = {
@@ -34,7 +34,7 @@ const metadata = {
       },
       { text: 'Read blog', href: '/blog' },
     ]}
-    image={{ src: '~assets/images/pk_hero_image.png', alt: 'Pauline' }}
+    image={{ src: pkHero, alt: 'Pauline' }}
   >
     <Fragment slot="title">
       Welcome to my blog
@@ -120,7 +120,7 @@ const metadata = {
           'and learnings from events like Nordic Summit, DynamicsMinds, and of course ColorCloud',*/},
     ]}
     image={{
-      src: '~assets/images/pk_microsoft.jpg',
+      src: pkMicrosoft,
       alt: 'Pauline at Microsoft ',
     }}
   >
