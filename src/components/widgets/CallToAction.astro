@@ -3,6 +3,8 @@ import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import type { CallToAction, Widget } from '~/types';
 import Headline from '~/components/ui/Headline.astro';
 import Button from '~/components/ui/Button.astro';
+import Image from '~/components/common/Image.astro'; // or use <img>
+import logo from '~/assets/images/logo.svg';
 
 interface Props extends Widget {
   title?: string;
@@ -26,9 +28,13 @@ const {
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
-  <div
-    class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600"
-  >
+  <div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600">
+
+    <!-- ✅ Fixed logo always shown -->
+    <div class="mb-6 flex justify-center">
+      <Image src={logo} alt="Logo" width={120} height={120} class="mx-auto" />
+    </div>
+
     <Headline
       title={title}
       subtitle={subtitle}
@@ -39,6 +45,7 @@ const {
         subtitle: 'text-xl text-muted dark:text-slate-400',
       }}
     />
+
     {
       actions && (
         <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 mt-6">

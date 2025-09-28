@@ -4,7 +4,6 @@ import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 /*import Features from '~/components/widgets/Features.astro';*/
 /*import Features2 from '~/components/widgets/Features2.astro';*/
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 /*import FAQs from '~/components/widgets/FAQs.astro';*/
@@ -13,7 +12,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import pkHero from '~/assets/images/pk_hero_image.png';
 import pkMicrosoft from '~/assets/images/pk_microsoft.jpeg';
 import pkDmSpeaker from '~/assets/images/pk_dm_speaker.jpeg';
-
+import logo from '~/assets/images/logo.svg';
 
 const metadata = {
   title: 'Pauline Kolde - The Art Of Customer Insights',
@@ -29,7 +28,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Subscribe',
-        href: '#',
+        href: '/subscribe',
         target: '_blank',
         icon: 'tabler:bell',
       },
@@ -51,264 +50,87 @@ const metadata = {
   <!-- Note Widget ******************* -->
 
   <Note title="My Philosophy:" description="Innovation. Inspiration. Connection." />
-
-  <!-- Features Widget *************** -->
-<!--   <Features
-    id="features"
-    tagline="TL:DR"
-    title="Pauline"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
-    items={[
-      {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  />
--->
+ 
   <!-- Content Widget **************** -->
 
   <Content
     isReversed
-    tagline="About this Blog"
     title="Technology should feel empowering, not overwhelming."
-    items={[
+      items={[
       {
-        title: 'Deep-dives into Dynamics 365 Customer Insights & Power Platform',
+        title: 'Practical deep dives into Dynamics 365 Customer Insights & Power Platform',
        /* description:
           '...',*/
+          icon: 'tabler:automation',
       },
       {
-        title: 'Real use cases from marketing automation projects',
+        title: 'Real examples from CRM and marketing automation projects',
         /*description:
           'from marketing automation to AI-driven sales & Copilot Studio',*/
-      },
+       icon: 'tabler:speakerphone',
+        },
       {
-        title: 'Community stories and learnings from events and life',
+        title: 'Stories from the community and lessons learned on my journey as a consultant',
         /*description:
-          'and learnings from events like Nordic Summit, DynamicsMinds, and of course ColorCloud',*/},
-    ]}
+          'and learnings from events like Nordic Summit, DynamicsMinds, and of course ColorCloud',*/
+         icon: 'tabler:writing',},
+   ]}
     image={{
       src: pkMicrosoft,
       alt: 'Pauline at Microsoft ',
     }}
   >
     <Fragment slot="content">
-      <!--*<h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Hands-on guides, lessons from my projects, and fresh perspectives</h3>-->
-      I believe knowledge grows when it's shared and this space is where I turn my experience into resources you can use. Happy reading!
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About this blog</h3>
+      This blog is my way of turning everyday experiences into something you can use right away.
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
   <!-- Content Widget **************** -->
-<!-- 
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content> -->
-
-  <!-- Content Widget **************** 
  
   <Content
-    isReversed
     isAfterContent
     items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>  -->
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Let's meet at the next community event!"
-    items={[
-      {
-        title: 'October 2025: <span class="font-medium">South Coast Summit in Farnborough</span>',
-        description:
-          '<a href="https://southcoastsummit.com" target="_blank" class="text-[#476a30] hover:text-[#314821]">Learn more about South Coast Summit</a>',
-        icon: 'tabler:check',
-      },
-      {
-        title: 'December 2025:<span class="font-medium"> Microsoft AI Tour in Frankfurt</span>',
+            {
+        title: 'December 2025:Microsoft AI Tour in Frankfurt',
         description:
            '<a href="https://aitour.microsoft.com/flow/microsoft/frankfurt26/landingpage/page/cityhome" target="_blank" class="text-[#476a30] hover:text-[#314821]">Learn more about Microsoft AI Tour</a>',
-        icon: 'tabler:check',
+        icon: 'tabler:brand-windows',
       },
       {
-        title: 'January 2026: <span class="font-medium">CTTT in Tallinn</span>',
+        title: 'January 2026: CTTT in Tallinn',
         description:
            '<a href="https://cloudtechtallinn.com/" target="_blank" class="text-[#476a30] hover:text-[#314821]">Learn more about CTTT</a>',
-        icon: 'tabler:check',
+        icon: 'tabler:empathize',
       },
       {
-        title: 'April 2026: <span class="font-medium">ColorCloud in Hamburg</span>',
+        title: 'April 2026: ColorCloud in Hamburg',
         description:
            '<a href="https://color.cloud/" target="_blank" class="text-[#476a30] hover:text-[#314821]">Learn more about ColorCloud</a>',
-        icon: 'tabler:check',
+        icon: 'tabler:rainbow',
       },
     ]}
-  image={{
-    src: pkDmSpeaker,
-    alt: 'Pauline speaking at Dynamics Minds',
-  }}
-  />
-
-  <!-- Features2 Widget ************** 
-
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
+      image={{
+      src: pkDmSpeaker,
+      alt: 'Pauline at DynamicsMinds',
+    }}
   >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>-->
+    <Fragment slot="content">Community matters</Fragment>
 
+      <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Let's meet at the next event</h3>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-green-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+ 
+  
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
@@ -357,18 +179,7 @@ const metadata = {
     ]}
   />-->
 
-  <!-- Stats Widget ****************** 
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
--->
-  <!-- CallToAction Widget *********** -->
+    <!-- CallToAction Widget *********** -->
 
   <CallToAction
     actions={[
@@ -381,6 +192,9 @@ const metadata = {
       },
     ]}
   >
+ <Fragment slot="logo">
+    <img src= logo alt="Logo" class="mx-auto mb-4 w-20 h-auto" />
+  </Fragment>
     <Fragment slot="title">
      Pauline <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Kolde</span>
     </Fragment>

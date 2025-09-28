@@ -76,13 +76,10 @@ export const headerData = {
                
       ],
     },
-    {
-      text: 'Subscribe',
-      href: getPermalink('/subscribe'),
-    },
+    
     
     ],
-  actions: [{ text: 'Contact me', href: '/contact', target: "_blank" }],
+  actions: [{ text: 'Subscribe', href: '/subscribe'}],
 };
 
 export const footerData = {
@@ -125,6 +122,7 @@ export const footerData = {
   secondaryLinks: [
     { text: 'Imprint', href: getPermalink('/imprint') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
+     { text: 'Contact', href: getPermalink('/contact') },
   ],
   socialLinks: [
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/paulinekolde/'},
@@ -133,6 +131,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/pauline-kolde'},
   ],
   footNote: `
-    2025 · Made with the help of <a class="text-blue-600 underline dark:text-muted" href="https://github.com/arthelokyo"> Arthelokyo</a> · All rights reserved.
+    2025 · Made with the help of <a class="text-[#476a30] underline dark:text-muted" href="https://github.com/arthelokyo"> Arthelokyo</a> · All rights reserved.
   `,
 };
