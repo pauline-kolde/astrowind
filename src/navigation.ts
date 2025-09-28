@@ -76,6 +76,10 @@ export const headerData = {
                
       ],
     },
+    {
+      text: 'Subscribe',
+      href: getPermalink('/subscribe'),
+    },
     
     ],
   actions: [{ text: 'Contact me', href: '/contact', target: "_blank" }],
