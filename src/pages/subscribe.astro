@@ -1,0 +1,45 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+
+const metadata = {
+  title: 'Subscribe',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Subscribe" title="Want to be informed about updates?" />
+
+  <ContactUs
+    id="subscription-form"
+    title="Sign up to my newsletter!"
+    subtitle=""
+    inputs={[
+      {
+        type: 'text',
+        name: 'first_name',
+        label: 'First Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+        required: true,
+      },
+    ]}
+       disclaimer={{
+      
+      label:
+        'By submitting this  form, you agree to the collection of your personal information and you can unsubscribe any time.', }}
+ 
+   description="Thank you for your interest."
+  />
+
+  
+
+</Layout>
+
+
