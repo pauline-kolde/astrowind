@@ -1,50 +1,69 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
 
 const metadata = {
   title: 'Subscribe to Newsletter',
-  description: 'Stay updated with our latest insights and updates. Subscribe to our newsletter.',
+  description: 'Stay updated with latest insights and updates.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Section -->
   <HeroText
-    tagline="Newsletter"
-    title="Subscribe to Our Newsletter"
+    tagline="Sign up"
+    title="Subscribe to Newsletter"
     subtitle="Stay updated with the latest insights, tips, and updates delivered directly to your inbox."
   />
 
-  <!-- Newsletter Subscription Form -->
-  <ContactUs
-    id="newsletter-form"
-    title="Join Our Newsletter"
-    subtitle="Get exclusive content and be the first to know about new posts and updates."
-    inputs={[
-      {
-        type: 'text',
-        name: 'firstname',
-        label: 'First Name',
-        placeholder: 'Enter your first name',
-        required: true,
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email Address',
-        placeholder: 'Enter your email address',
-        required: true,
-      },
-    ]}
-    
-    disclaimer={{
-      label: 'I agree to receive newsletters and marketing communications. I can unsubscribe at any time by clicking the unsubscribe link in any email or by contacting us directly. View our Privacy Policy for more details.',
-           
-    }}
-    button="Subscribe Now"
-    description="We respect your privacy. Your information will never be shared with third parties. You can unsubscribe at any time."
-   
-  />
+  <div
+  class="flex flex-col max-w-xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full mb-16"  >
+    <form
+      name="subscribe"
+      method="POST"
+      data-netlify="true"
+      class="flex flex-col gap-6"
+    >
+      <div class="flex flex-col gap-2">
+        <label class="text-sm font-medium text-[#101010] dark:text-gray-300"
+          >First Name</label
+        >
+        <input
+          type="text"
+          name="first-name"
+  class="block bg-white border border-gray-200 dark:bg-slate-900 dark:border-gray-700 px-4 py-3 rounded-lg text-md w-full"        />
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-sm font-medium text-[#101010] dark:text-gray-300"
+          >Email</label
+        >
+        <input
+          type="email"
+          name="email"
+          required
+  class="block bg-white border border-gray-200 dark:bg-slate-900 dark:border-gray-700 px-4 py-3 rounded-lg text-md w-full"        />
+      </div>
+
+      <div class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+        <input
+          type="checkbox"
+          name="opt-in"
+          required
+          class="mt-1 rounded border-gray-300 dark:border-gray-700 text-primary-600 focus:ring-primary-500"
+        />
+        <label>
+          I agree to receive newsletters. We respect your privacy. Your information will never be shared with third
+          parties. You can unsubscribe at any time.
+        </label>
+      </div>
+
+      <button
+        class="btn btn-primary w-full"
+        type="submit"
+      >
+        Subscribe
+      </button>
+    </form>
+  </div>
 </Layout>

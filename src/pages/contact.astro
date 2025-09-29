@@ -10,13 +10,17 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
-
-  <HeroText tagline="Contact" title="Let's Connect!" />
-
+   
+<div class="mb-*">
+<HeroText 
+    tagline="Contact me"
+    title="Get in Touch"
+    subtitle="I would love to hear from you! Please fill out the form below."
+  />
+<div class="mt-*">
   <ContactUs
     id="contact-form"
-    title="Drop me a message!"
-    subtitle=""
+  
     inputs={[
       {
         type: 'text',
@@ -39,7 +43,7 @@ const metadata = {
         'By submitting this contact form, you acknowledge and agree to the collection of your personal information.', }}
  
    description="I promise, I try to answer as soon as possible."
-  />
+  /></div></div>
 
   
 

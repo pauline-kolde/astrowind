@@ -5,25 +5,7 @@ export const headerData = {
     {
       text: 'Home',
       href: getPermalink('/#'),
-      /*links: [
-        {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
-        },
-        {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
-        },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
-        },
-        {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
-        },
-      ],*/
-    },
+          },
     {
       text: 'Blog',
       href: getPermalink('/blog'),
@@ -72,6 +54,10 @@ export const headerData = {
           text: 'CRMK Deutschland',
           href: 'https://www.crmk.eu/',
            target: "_blank"
+        },
+        {
+          text: 'Contact me',
+          href: getPermalink('/contact'),
         },
                
       ],
