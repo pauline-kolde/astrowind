@@ -4,6 +4,10 @@ import type { CallToAction, Widget } from '~/types';
 import Headline from '~/components/ui/Headline.astro';
 import Button from '~/components/ui/Button.astro';
 
+// ✅ Use Astro's built-in Image component
+import { Image } from 'astro:assets';
+import Logo from '~/assets/images/pk_logo.png';
+
 interface Props extends Widget {
   title?: string;
   subtitle?: string;
@@ -28,11 +32,17 @@ const {
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600">
 
-    <!-- Logo placeholder - removed to fix deployment issue -->
-    <div class="mb-6 flex justify-center">
-      <div class="w-30 h-30 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold">
-        PK
-      </div>
+    <!-- Logo above Pauline Kolde -->
+    <div class="p-* mb-* sm:mb-*">
+      <Image
+        src={Logo}
+        alt="Pauline Kolde logo"
+        widths={[96, 128, 160, 192]} 
+        sizes="(min-width: 1024px) 160px, (min-width: 640px) 128px, 96px"
+        class="mx-auto h-auto w-[96px] sm:w-[128px] lg:w-[160px] select-none"
+        loading="lazy"
+        decoding="async"
+      />
     </div>
 
     <Headline
