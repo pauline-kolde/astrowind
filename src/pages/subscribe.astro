@@ -4,42 +4,47 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 
 const metadata = {
-  title: 'Subscribe',
+  title: 'Subscribe to Newsletter',
+  description: 'Stay updated with our latest insights and updates. Subscribe to our newsletter.',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
+  <!-- Hero Section -->
+  <HeroText
+    tagline="Newsletter"
+    title="Subscribe to Our Newsletter"
+    subtitle="Stay updated with the latest insights, tips, and updates delivered directly to your inbox."
+  />
 
-  <HeroText tagline="Subscribe" title="Want to be informed about updates?" />
-
+  <!-- Newsletter Subscription Form -->
   <ContactUs
-    id="subscription-form"
-    title="Sign up to my newsletter!"
-    subtitle=""
+    id="newsletter-form"
+    title="Join Our Newsletter"
+    subtitle="Get exclusive content and be the first to know about new posts and updates."
     inputs={[
       {
         type: 'text',
-        name: 'first_name',
+        name: 'firstname',
         label: 'First Name',
+        placeholder: 'Enter your first name',
+        required: true,
       },
       {
         type: 'email',
         name: 'email',
-        label: 'Email',
+        label: 'Email Address',
+        placeholder: 'Enter your email address',
         required: true,
       },
     ]}
-       disclaimer={{
-      
-      label:
-        'By submitting this  form, you agree to the collection of your personal information and you can unsubscribe any time.', }}
- 
-   description="Thank you for your interest."
+    
+    disclaimer={{
+      label: 'I agree to receive newsletters and marketing communications. I can unsubscribe at any time by clicking the unsubscribe link in any email or by contacting us directly. View our Privacy Policy for more details.',
+           
+    }}
+    button="Subscribe Now"
+    description="We respect your privacy. Your information will never be shared with third parties. You can unsubscribe at any time."
+   
   />
-
-  
-
 </Layout>
-
-
